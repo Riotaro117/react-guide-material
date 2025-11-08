@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/libs/react.development.js"></script>
+    <script src="/libs/react-dom.development.js"></script>
+    <!-- BabelでJSXのコードに変換して使用する -->
+    <script src="/libs/babel-standalone.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- typeを指定することでbabelが有効になる -->
+    <script type="text/babel">
+      // HTMLを取得する
+      const appEl = document.querySelector('#app');
+      // React要素を取得する
+      const root = ReactDOM.createRoot(appEl);
+
+      // コンポーネントを定義する→関数コンポーネントで定義すること、アロー関数でも可能
+      // function Example() {
+      //   return <h1>Hello React </h1>;
+      // }
+      // 複数行にわたるときは（）で囲むこと
+      const Example = () => {
+        return (
+          <div>
+            <h1>Hello React </h1>
+          </div>
+        );
+      };
+      // renderの中に書いた要素を表示する
+      // 定義した関数の頭文字は大文字にすること、小文字にするとタグと間違えられる
+      root.render(<Example />);
+    </script>
+  </body>
+</html>
