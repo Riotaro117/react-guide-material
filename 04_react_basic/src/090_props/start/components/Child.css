@@ -3,3 +3,12 @@
   color: blue;
   border: 5px solid blue;
 }
+/* スペースを入れるかどうかで親子関係か複数クラスか変わるので注意 */
+.App-start .component.red {
+  color: red;
+  border: 5px solid red;
+}
+.App-start .component.green {
+  color: green;
+  border: 5px solid green;
+}
