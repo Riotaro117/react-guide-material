@@ -1,5 +1,14 @@
-import Child from "./components/Child";
+import Child from './components/Child';
+import Expression from './components/Expression';
+import { Fragment } from 'react';
 
-const Example = () => <Child />;
+const Example = () => {
+  return (
+    <Fragment>
+      <Child />
+      <Expression />
+    </Fragment>
+  );
+};
 
 export default Example;
