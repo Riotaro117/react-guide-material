@@ -1,5 +1,6 @@
 import React from "react";
 
+// JSXはJavaScriptのオブジェクト
 const Example = () => {
   const sample1 = <h1 className="greeting">Hello World</h1>;
 
