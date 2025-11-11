@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
+// useStateは値が更新されるたびに再レンダリングされる
 
 const Example = () => {
-  let displayVal;
-  let [ val, setVal ] = useState();
+  let [val, setVal] = useState();
   console.log('再レンダリングされました');
   return (
     <>
