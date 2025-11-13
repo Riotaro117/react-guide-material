@@ -10,10 +10,10 @@ const Example = () => {
     setOrder((order) => ({ ...order, item: e.target.value }));
   };
   const countUp = () => {
-    setOrder({ ...order, count: order.count + 1 });
+    setOrder((order) => ({ ...order, count: order.count + 1 }));
   };
   const countDown = () => {
-    setOrder({ ...order, count: order.count - 1 });
+    setOrder((order) => ({ ...order, count: order.count - 1 }));
   };
   return (
     <div>
