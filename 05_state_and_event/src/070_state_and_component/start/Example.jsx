@@ -3,12 +3,15 @@ import { useState } from 'react';
 const Example = () => {
   const [toggle, setToggle] = useState(true);
   const toggleComponent = () => {
+    // useStateの更新関数に前の値を更新する形にする
     setToggle((prestate) => !prestate);
   };
   return (
     <>
       <button onClick={toggleComponent}>toggle</button>
-      {toggle ? <Count title="A" /> : <Count title="B" />}
+      {/* 三項演算子で条件を分岐し、表示を切り替える */}
+      {/* keyを設定することでコンポーネントが同階層であっても、それぞれ別物であると認識させられる */}
+      {toggle ? <Count key="A" title="A" /> : <Count key="B" title="B" />}
     </>
   );
 };
